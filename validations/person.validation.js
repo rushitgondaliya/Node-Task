@@ -5,6 +5,7 @@ const createperson = {
   body: Joi.object().keys({
     first_name: Joi.string().required().trim(),
     last_name: Joi.string().required().trim(),
+    id: Joi.number().required(),
   }),
 };
 

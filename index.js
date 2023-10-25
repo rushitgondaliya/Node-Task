@@ -39,10 +39,12 @@ app.use((req, res, next) => {
 connectDB()
 
 /** get positional perameters */
-// app.get("/person/:first_name", (req,res) => {
-//   console.log(req.params);
-// });
-app.get('/sample/:id', routes.sample);
+app.get("/:id", (req,res) => {
+  console.log(req.params);
+  res
+    .status(200)
+    .json({success: true, message: "token created!" , data: "saveToken"})
+});
 
 
 
